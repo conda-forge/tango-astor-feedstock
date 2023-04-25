@@ -1,11 +1,11 @@
-About tango-astor
-=================
+About tango-astor-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tango-astor-feedstock/blob/main/LICENSE.txt)
 
 Home: https://www.tango-controls.org
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tango-astor-feedstock/blob/main/LICENSE.txt)
 
 Summary: Astor is a graphical Tango control system administration tool.
 
