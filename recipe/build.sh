@@ -7,7 +7,7 @@ mvn install -DskipTests -Dmaven.compiler.source=8 -Dmaven.compiler.target=8
 mvn license:aggregate-third-party-report
 cp target/site/aggregate-third-party-report.html .
 
-mkdir -p ${PREFIX}/share/java
+mkdir -p ${PREFIX}/share/java ${PREFIX}/bin
 
 install -m 0644 target/Astor-${PKG_VERSION}-jar-with-dependencies.jar ${PREFIX}/share/java
 ln -s Astor-${PKG_VERSION}-jar-with-dependencies.jar ${PREFIX}/share/java/Astor.jar

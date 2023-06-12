@@ -10,14 +10,14 @@ source:
   sha256: 351c7dd08ab5dfaed264840f7f4ddb71426ee14a609f826badfca1247af9d182
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - openjdk 8
+    - openjdk 17
     - maven
   run:
-    - openjdk >=8
+    - openjdk >=17
 
 test:
   commands:
