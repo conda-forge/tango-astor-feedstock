@@ -21,10 +21,11 @@ if [ ! \$TANGO_HOST ] && [ -f /etc/tangorc ]; then
 fi
 
 export CLASSPATH=${PREFIX}/share/java/Astor.jar
+LOGBACK=\${TANGO_LOGBACK:-${PREFIX}/share/tango/logback.xml}
 
 java \
-    -mx128m \
     -DTANGO_HOST=\$TANGO_HOST \
+    -Dlogback.configurationFile="\$LOGBACK" \
     admin.astor.Astor \$@
 EOF
 chmod a+x $PREFIX/bin/astor
