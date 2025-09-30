@@ -24,15 +24,13 @@ requirements:
     - jtango-logback
 
 tests:
-  - script:
-      - if: unix
-        then: test -f ${PREFIX}/share/java/Astor.jar
-      - if: unix
-        then: test -f ${PREFIX}/bin/astor
-      - if: win
-        then: if not exist %PREFIX%\share\java\Astor.jar exit 1
-      - if: win
-        then: if not exist %PREFIX%\Scripts\astor.bat exit 1
+  - package_contents:
+      files:
+        - share/java/Astor.jar
+        - if: unix
+          then: bin/astor
+        - if: win
+          then: Scripts/astor.bat
 
 about:
   license: GPL-3.0-or-later
