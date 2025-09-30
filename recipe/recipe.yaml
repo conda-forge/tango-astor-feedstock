@@ -1,0 +1,49 @@
+schema_version: 1
+
+context:
+  name: tango-astor
+  version: 7.6.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://gitlab.com/tango-controls/astor/-/archive/${{ version }}/astor-${{ version }}.tar.gz
+  sha256: 85a38054a3ca86b2f2f0664c6182e49576fbed38ba123ed845143771d050d387
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - openjdk 17.*
+    - maven
+  run:
+    - openjdk >=17
+    - jtango-logback
+
+tests:
+  - script:
+      - if: unix
+        then: test -f ${PREFIX}/share/java/Astor.jar
+      - if: unix
+        then: test -f ${PREFIX}/bin/astor
+      - if: win
+        then: if not exist %PREFIX%\share\java\Astor.jar exit 1
+      - if: win
+        then: if not exist %PREFIX%\Scripts\astor.bat exit 1
+
+about:
+  license: GPL-3.0-or-later
+  license_file:
+    - LICENSE
+    - aggregate-third-party-report.html
+  summary: Astor is a graphical Tango control system administration tool.
+  homepage: https://www.tango-controls.org
+  repository: https://gitlab.com/tango-controls/astor
+  documentation: https://tango-controls.readthedocs.io/en/latest/tools-and-extensions/built-in/astor/index.html
+
+extra:
+  recipe-maintainers:
+    - beenje
