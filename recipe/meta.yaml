@@ -1,5 +1,5 @@
 {% set name = "tango-astor" %}
-{% set version = "7.6.0" %}
+{% set version = "7.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.com/tango-controls/astor/-/archive/{{ version }}/astor-{{ version }}.tar.gz
-  sha256: 85a38054a3ca86b2f2f0664c6182e49576fbed38ba123ed845143771d050d387
+  sha256: 6b9b383a46f523c02d99ee7b288bbd2e4910d8a6ded72b3234ea40d47cf3669a
 
 build:
   number: 0
