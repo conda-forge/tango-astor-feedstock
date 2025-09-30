@@ -5,7 +5,7 @@ mvn install -DskipTests -Dmaven.compiler.source=8 -Dmaven.compiler.target=8
 
 # Generate third party license report
 mvn license:aggregate-third-party-report
-cp target/site/aggregate-third-party-report.html .
+cp target/reports/aggregate-third-party-report.html .
 
 mkdir -p ${PREFIX}/share/java ${PREFIX}/bin
 
