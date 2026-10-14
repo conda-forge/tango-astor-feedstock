@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: tango-astor
-  version: 7.6.2
+  version: "7.6.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://gitlab.com/tango-controls/astor/-/archive/${{ version }}/astor-${{ version }}.tar.gz
-  sha256: 6b9b383a46f523c02d99ee7b288bbd2e4910d8a6ded72b3234ea40d47cf3669a
+  sha256: f67032ee2bb49e7ffd15acfc01e780e9271798fc936b84015a33623306ac4c6a
 
 build:
   number: 0
